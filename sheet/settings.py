@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'django_filters',
     'user',
+    'django_rest_passwordreset',
 ]
 
 REST_FRAMEWORK = {
@@ -153,3 +154,5 @@ SIMPLE_JWT = {
     'REFRESH_TOKEN_LIFETIME': timedelta(days=15),
     'ROTATE_REFRESH_TOKENS': True,
 }
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
