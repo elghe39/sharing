@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'django_filters',
     'user',
     'django_rest_passwordreset',
+    'rest_framework_simplejwt.token_blacklist',
+    'project',
 ]
 
 REST_FRAMEWORK = {
@@ -152,7 +154,8 @@ CORS_ALLOW_CREDENTIALS = True
 
 SIMPLE_JWT = {
     'REFRESH_TOKEN_LIFETIME': timedelta(days=15),
-    'ROTATE_REFRESH_TOKENS': True,
+    'ROTATE_REFRESH_TOKENS': False,
+    'BLACKLIST_AFTER_ROTATION': False,
 }
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
